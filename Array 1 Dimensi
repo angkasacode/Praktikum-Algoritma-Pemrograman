@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int larik[100];
+    int N;
+
+    cout<<"Program Penomoran data"<<endl;
+    cout<<"Nama: Salsabila Intania Bestari"<<endl;
+    cout<<"NIM : 22343071"<<endl;
+    cout<<endl;
+    cout<<"Banyak Larik: ";
+    cin>>N;
+    for(int i=1; i<=N; i++){
+        cout<<"Masukkan bilangan ke-"<<i<<": ";
+        cin>>larik[i];}
+    cout<<endl;
+    for(int i=1; i<=N; i++){
+    cout<<"Bilangan ke-"<<i<<" adalah "<<larik[i]<<endl;}
+
+return 0;
+}
