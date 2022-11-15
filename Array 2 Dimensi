@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    char ch;
+    int baris1,kolom1, baris2,kolom2;
+    int matriks1[100][100], matriks2[100][100], hasil[100][100];
+    int jml=0;
+
+    cout<<"Program Perkalian Matriks"<<endl;
+    cout<<"Nama: Salsabila Intania Bestari"<<endl;
+    cout<<"NIM : 22343071"<<endl;
+    cout<<endl;
+    cout<<"Masukkan orde matriks 1 (misal 2x2): ";
+    cin>>baris1>>ch>>kolom1;
+    cout<<"Masukkan orde matriks 2 (misal 2x2): ";
+    cin>>baris2>>ch>>kolom2;
+    cout<<endl;
+
+    if(baris1==kolom2){
+        cout<<"Masukkan data matriks 1"<<endl;
+        for(int i=1;i<=baris1;i++){
+           for(int j=1;j<=kolom1;j++){
+             cout<<"Masukkan nilai M"<<i<<j<<": ";
+             cin>>matriks1[i][j];}}
+        cout<<"Elemen Matriks 1"<<endl;
+        for(int i=1;i<=baris1;i++){
+           for(int j=1;j<=kolom1;j++){
+             cout<<matriks1[i][j]<<"\t";}
+             cout<<endl;}
+        cout<<endl;
+        cout<<"Masukkan data matriks 2"<<endl;
+        for(int i=1;i<=baris2;i++){
+           for(int j=1;j<=kolom2;j++){
+             cout<<"Masukkan nilai M"<<i<<j<<": ";
+             cin>>matriks2[i][j];}}
+        cout<<"Elemen Matriks 2"<<endl;
+        for(int i=1;i<=baris2;i++){
+           for(int j=1;j<=kolom2;j++){
+             cout<<matriks2[i][j]<<"\t";}
+             cout<<endl;}
+        for(int i=1;i<=baris1,i<=baris2;i++){
+           for(int j=1;j<=kolom1,j<=kolom2;j++){
+                jml=0;
+           for(int k=1;k<=baris1,k<=baris2;k++){
+                jml=jml+matriks1[i][k]*matriks2[k][j];}
+                hasil[i][j]=jml;}}
+        cout<<endl;
+        cout<<endl;
+        cout<<"Hasil perkalian matriks 1 dan matriks 2"<<endl;
+        for(int i=1;i<=baris1,i<=baris2;i++){
+           for(int j=1;j<=kolom1,j<=kolom2;j++){
+             cout<<hasil[i][j]<<"\t";}
+             cout<<endl;}}
+    else {
+        cout<<"Perkalian tidak dapat dilakukan"<<endl;
+    }
+return 0;
+}
